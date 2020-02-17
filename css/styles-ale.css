@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+div {box-sizing: border-box;}
+.wrap {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+header.top {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid grey;
+    padding: 15px 0;
+    z-index: 1;
+}
+header.top:after { 
+    content: "";
+    display: block;
+    clear: both;
+}
+.logo {float: left;}
+nav { float: right;}
+.menu {
+    list-style-type: none;
+}
+.menu li {
+    display: inline-block;
+    padding: 0 0 0 15px;
+}
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+.mob_menu {
+   color: white;
+   background-color: #ff3333; 
+   display: none;
+   float: right;
+   padding: 10px;
+   text-align: center;
+   border-radius: 7px;
+}
+#menuCheck {
+    display: none;
+}
+
+.parallax_bg {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/alegain-top/alegain_top_bg.jpg");
+    background-color: #333333;
+    /*filter: grayscale();  makes gray all inside this section*/
+}
+#s1 {
+    padding-top: 100px;
+    position: relative;
+}
+#s1:after {
+    content: "";
+    background-color: #333333;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#s1 h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+#s1 p {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+.laptop {
+    position: relative;
+    bottom: -22px;
+    text-align: center;
+}
+.laptop img { 
+    width: 80%; 
+    max-width: 500px;
+}
+.f1 {
+    margin: 30px auto;
+    text-align: center;
+}
+.f1 input {
+    padding: 15px;
+    margin-right: -4px;
+    border: none;
+    border-radius: 7px 0 0 7px;
+    width: 40%;
+    max-width: 250px;
+    text-align: center;
+}
+.f1 .btn-submit {
+    background-color: #ff3333;
+    border-radius: 0 7px 7px 0;
+    font-weight: bold;
+    color: white;
+    width: 25%;
+    max-width: 120px;
+}
+
+.work_bg {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../img/alegain-work/alegain_work_bg.jpg);
+}
+#s7 {
+    color: white;
+    margin-top: 50px;
+}
+#s7 h2 {text-align: center;}
+.set {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+.col {
+    flex-basis: calc( 30% - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.col_pict {
+    flex-basis: calc( 30% - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow:3;
+    flex-shrink: 0;
+}
+.col_pict img {
+    width: 150%;
+    position: relative;
+    left: -45%;
+}
+
+.l {text-align: left;}
+.r {text-align: right;}
+.c {text-align: center;}
+.single_work {
+    margin: 0 0 30px 0;
+}
+.work_img {
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+    max-width: 70%;
+}
+.work_img  img {
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .f1 input, .f1 .btn-submit {
+       display: block;
+       width: 70%;
+       border-radius: 7px;
+       margin: 10px auto;
+       max-width: 400px;
+       box-sizing: border-box;
+    }
+    .mob_menu {
+        display: inline-block;
+        cursor: pointer;
+    }
+    .menu {
+        /*display: none;*/
+        position: absolute;
+        top: 30px;
+        left: -50px;
+        width: 100%;
+        
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1s;
+    }
+    .menu li {
+        display: block;
+        background-color: #ff3333;
+        margin: 10px;
+        border-radius: 7px;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+    #menuCheck:checked + .menu{
+        /*display: block;*/
+        opacity: 1;
+        max-height: 200px;
+    }
+}
